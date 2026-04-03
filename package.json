@@ -1,5 +1,5 @@
 {
-  "name": "my-tools",
+  "name": "chrome-sidepanel-extension-template",
   "description": "A minimal Chrome extension with side panel.",
   "version": "0.1.0",
   "type": "module",

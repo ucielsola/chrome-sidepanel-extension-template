@@ -17,12 +17,12 @@ export default defineConfig({
     },
   }),
   manifest: {
-    name: "my-tools",
+    name: "Chrome Sidepanel Extension Template",
     description: packageJson.description,
     version: packageJson.version,
     permissions: ["storage", "sidePanel"],
     action: {
-      default_title: "my-tools",
+      default_title: "Chrome Sidepanel Extension Template",
     },
     side_panel: {},
   },

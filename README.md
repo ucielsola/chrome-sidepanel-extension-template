@@ -1,6 +1,6 @@
-# Excalivault
+# Chrome Sidepanel Extension Template
 
-Personal vault for storing Excalidraws - Chrome extension built with WXT, Svelte 5, Tailwind 4, and DaisyUI.
+A minimal Chrome extension with side panel. Built with WXT, Svelte 5, and Tailwind 4.
 
 ## Tech Stack
 
@@ -8,80 +8,41 @@ Personal vault for storing Excalidraws - Chrome extension built with WXT, Svelte
 - **Svelte 5** - Reactive UI framework with runes
 - **TypeScript** - Type safety
 - **Tailwind 4** - Utility-first CSS
-- **DaisyUI** - Tailwind component library
 
 ## Setup
 
 ```bash
-pnpm install
+npm install
 ```
 
 ## Development
 
 ```bash
-# Chrome (default)
-pnpm dev
-
-# Firefox
-pnpm dev:firefox
+npm run dev
 ```
 
 ## Build
 
 ```bash
-# Chrome
-pnpm build
-
-# Firefox
-pnpm build:firefox
-
-# Create zip package
-pnpm zip
+npm run build
+npm run zip
 ```
 
-## Using Just (recommended)
+## Loading Extension
 
-```bash
-just install   # pnpm install
-just dev       # pnpm dev
-just build     # pnpm build
-just status     # git status
-just test       # build + load instructions
-```
+1. Run `npm run build`
+2. Open `chrome://extensions`
+3. Enable **Developer Mode**
+4. Click **Load unpacked**
+5. Select `.output/chrome-mv3/`
 
 ## Project Structure
 
 ```
 src/
 ├── entrypoints/
-│   ├── popup/          # Extension popup UI
-│   ├── options/         # Options/settings page
-│   ├── background.ts    # Background service worker
-│   └── content.ts      # Content scripts
+│   ├── sidepanel/     # Side panel UI
+│   └── background.ts  # Background service worker
 ├── lib/               # Shared components
-├── assets/            # Compiled assets
-├── public/            # Static files (icons, etc.)
-└── app.css            # Global styles (Tailwind)
+└── public/            # Static files (icons)
 ```
-
-## Loading Extension
-
-1. Run `pnpm build`
-2. Open `chrome://extensions`
-3. Enable **Developer Mode**
-4. Click **Load unpacked**
-5. Select `.output/chrome-mv3/`
-
-## Documentation
-
-The documentation site is built with Astro and hosted on Vercel.
-
-```bash
-# Start docs dev server
-pnpm docs:dev
-
-# Build docs
-pnpm docs:build
-```
-
-See [docs/README.md](./docs/README.md) for more details.
